@@ -1,0 +1,11 @@
+# Julia package ignore rules
+Manifest.toml
+*.jl.cov
+*.jl.*.cov
+*.jl.mem
+docs/build/
+docs/site/
+
+# macOS temp files
+.DS_Store
+*.swp
