@@ -19,6 +19,27 @@ It is inspired by the architecture of `SFrontiers.jl`, featuring a **Unified API
 
 ---
 
+## Built-in Mathematical Model
+
+The TTSFM evaluating a pooled cross-sectional regression model is defined as:
+
+$$ y_{i,t} = \alpha + X_{i,t} \beta + v_{i,t} - u_{i,t} + w_{i,t} $$
+
+This can be rewritten as $y_{i,t} = \alpha + X_{i,t} \beta + \epsilon_{i,t}$, where the composed error $\epsilon_{i,t}$ is given by:
+
+$$ \epsilon_{i,t} = v_{i,t} - u_{i,t} + w_{i,t} $$
+
+- **$y_{i,t}$**: The dependent variable (e.g., firm investment rate).
+- **$X_{i,t}$**: A $1 \times K$ vector of explanatory variables representing the frontier.
+- **$\alpha$** and **$\beta$**: Frontier intercept and slope coefficients.
+- **$v_{i,t}$**: Symmetric random noise, assumed to be i.i.d. normally distributed as $\mathcal{N}(0, \sigma_v^2)$.
+- **$u_{i,t}$**: One tier of efficiency representing under-investment logic.
+- **$w_{i,t}$**: The second tier of efficiency representing over-investment logic (or reverse relation).
+
+While $v_{i,t}$ is normally distributed, $u_{i,t}$ and $w_{i,t}$ are mutually independent (and independent of $X_{i,t}$), and can be modeled under various non-negative distributions such as Exponential, Half-Normal, Weibull, and Pareto.
+
+---
+
 ## Installation
 
 You can install `TTSFM.jl` by cloning the repository to your environment or adding it as an active local path:
