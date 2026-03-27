@@ -3,7 +3,6 @@
 **TTSFM.jl** (Two-Tier Stochastic Frontier Model) is a robust and user-friendly Julia package designed for estimating Two-Tier Stochastic Frontier Models using the Maximum Simulated Likelihood Estimation (MSLE) method. 
 
 It is inspired by the architecture of `SFrontiers.jl`, featuring a **Unified API** that abstracts mathematical complexity and delegates background optimization to dedicated, distribution-specific backends.
-Ａ
 ---
 
 ## Features
